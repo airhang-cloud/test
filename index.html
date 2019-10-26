@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--为了ie9一下的浏览器可显示效果，下面的代码要复制-->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>demo</title>
+
+
+</head>
+<script>
+    window.onload=function () {
+        var Lunbobox=document.getElementsByClassName("box")[0];
+        var LunboAll=Lunbobox.getElementsByTagName("img")[0];
+        var timer=null; var loop=0;
+        timer=setInterval(function () {
+           loop++;
+            loop%=3;
+            console.log(loop);
+            LunboAll.setAttribute("src","pic/a"+(loop+1)+".jpg");
+        },1500);
+
+
+    }
+</script>
+<div class="container">
+    <div class="row">
+    <div class="col-md-3">
+        <div class="logo">
+            <a href="#">
+                <img src="pic/b5.jpg">
+            </a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><i class="glyphicon glyphicon-envelope"></i><a href="#">调研数据</a></li>
+                <li><i class="glyphicon glyphicon-list-alt"></i><a href="#">用户评估</a></li>
+                <li><i class="glyphicon glyphicon-align-center"></i><a href="#">媒体效应</a></li>
+                <li><i class="glyphicon glyphicon-align-justify"></i><a href="#">实地考察</a></li>
+                <li><i class="glyphicon glyphicon-indent-right"></i><a href="#">社会实践</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="box">
+            <img src="pic/a1.jpg">
+        </div>
+    </div>
+    <div class="col-md-2">3</div>
+    </div>
+</div>
+</body>
+</html>
